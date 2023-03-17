@@ -30,7 +30,7 @@ function App() {
 
   const initialSearch = async () => {
     console.log('app/searchImages()')
-    const url = `${mainUrl}${clientID}&page=1&query=${searchTerm}`
+    const url = `${searchUrl}${clientID}&page=1&query=${searchTerm}`
     try {
       setLoading(true)
       const response = await fetch(url)
@@ -48,7 +48,7 @@ function App() {
 
   const searchImages = async () => {
     console.log('app/searchImages()')
-    const url = `${mainUrl}${clientID}&page=${page}&query=${searchTerm}`
+    const url = `${searchUrl}${clientID}&page=${page}&query=${searchTerm}`
     try {
       setLoading(true)
       const response = await fetch(url)
